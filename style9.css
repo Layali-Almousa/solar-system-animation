@@ -1,0 +1,104 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: radial-gradient(#555, #000);
+}
+
+@keyframes stars {
+    form {
+        opacity: 1;
+    }
+
+    to {
+        opacity: .2;
+    }
+}
+
+@keyframes eearth {
+    to {
+        transform: rotate(360deg)
+    }
+
+}
+@keyframes suun{
+    to{
+        box-shadow: 0 0 300px #c7a419fa;
+    }
+}
+
+.star {
+    width: 100%;
+    height: 100%;
+    background-image: url(img/stars.png);
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation: stars linear 4s;
+}
+
+.sun {
+    width: 200px;
+    height: 200px;
+    background: radial-gradient(#f5c313, #ec7e08);
+    border-radius: 100%;
+    box-shadow: 0 0 150px #c7a419fa;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: calc(-200px/2);
+    margin-left: calc(-200px/2);
+    animation: suun 4s linear infinite;
+}
+
+.Earth {
+    width: 450px;
+    height: 350px;
+    position: absolute;
+    /* border: #ec7e08 2px solid;*/
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    margin-top: calc(-350px / 2);
+    margin-left: calc(-450px / 2);
+    animation: eearth 4s linear infinite;
+}
+
+.earth {
+    background-image: url('img/earth.png');
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    top: 50%;
+    left: -40px;
+    margin-top: -40px;
+    animation: eearth 4s linear infinite;
+}
+
+.moon1 {
+    width: 150px;
+    height: 150px;
+    /* border: #ec7e08 2px solid;*/
+    border-radius: 50%;
+    position: absolute;
+    top: -35px;
+    left: -35px;
+    /* 150 -80 = 70 / 2 = 35*/
+    animation: eearth 1s linear infinite reverse;
+}
+
+.moon {
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(#ddd, #888);
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    margin-top: -10px;
+    animation: eearth 1s linear infinite reverse;
+}
